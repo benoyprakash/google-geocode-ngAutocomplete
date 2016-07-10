@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="Test">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"href="style.css">
+    
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <!--<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+    <script src="script.js"></script>
+    <script src="NGAUTOCOMPLETE.Js"></script>
+</head>
+
+<body>
+
+<div ng-controller="TestCtrl">
+<form id="form" role="form" name="but">
+Credits : http://ngmodules.org/modules/ngAutocomplete
+  <div class="form-group move-down">
+    <label for="Autocomplete2">Autocomplete Model</label>
+    <input type="text" id="Autocomplete2" ng-model="autocomplete" class="form-control" ng-autocomplete options="options" details="details"/>
+
+    <br>
+    <b>Autocomplete : </b>{{autocomplete}}	<br>
+    <b>Address      : </b>{{details.formatted_address}}	<br>
+	<b>Latitude & Longitude : </b>{{details.geometry.location}}	<br>
+
+  </div>
+Details for API key & securing the requests with our key : <br>
+https://developers.google.com/maps/documentation/javascript/get-api-key
+
+<br><br><br>
+
+<br><br>
+{{details}}
+</form>
+
+
+</div>
+
+</body>
+</html>
